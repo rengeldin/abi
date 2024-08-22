@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="img/logo1.png"> 
+    <link rel="stylesheet" href="watsap.css">
+    <title>CerebroDesafío</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=+591%2069107615&text=hola,%20quisiera%20saber%20mas%20de%20sus%20juegos%20educativos." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+        </a>
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="background-video">
+        <source src="img/fondo.mp4" type="video/mp4">
+    </video>
+    <h1>Mente Maestra</h1>
+
+    <!-- Logo en la esquina -->
+    <img src="img/logo1.png" alt="Logo" id="logoEsquina">
+
+    <!-- Pantalla inicial -->
+    <div id="pantalla-inicial">
+        <p>¿Te atreves a contestar?</p>
+        <button class="btn" onclick="comenzarJuego()">COMENZAR A JUGAR</button>
+    </div>
+
+    <!-- Pantalla juego -->
+    <div id="pantalla-juego" class="pantalla-juego">
+        <img src="img/ad.svg" alt="" id="imgBandera">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0"></div>
+                <div class="nombre" id="n0">OPCION </div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">A</div>
+                <div class="nombre" id="n1">OPCION A</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">B</div>
+                <div class="nombre" id="n2">OPCION B</div>
+            </div>
+            <div class="opcion" id="op3" onclick="comprobarRespuesta(3)">
+                <div class="letra" id="l3">C</div>
+                <div class="nombre" id="n3">OPCION C</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla final -->
+    <div id="pantalla-final">
+        <h2>CORRECTAS: <span id="numCorrectas">0</span></h2>
+        <h2>INCORRECTAS: <span id="numIncorrectas">0</span></h2>
+        <button class="btn" onclick="volverAlInicio()">VOLVER AL INICIO</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background: none; /* Remove existing background settings */
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1;
+}
+
+#logoEsquina {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    width: fit-content;
+    background-color: #fff;
+    margin: 40px auto;
+    border-radius: 60px;
+    box-shadow: 5px 5px 0 #000;
+    padding: 20px 30px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Pantalla Inicial */
+#pantalla-inicial {
+    display: block;
+    margin: 60px 0;
+}
+
+.btn {
+    border: none;
+    background: #580078;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Pantalla Juego */
+#pantalla-juego {
+    display: none;
+}
+
+.pantalla-juego {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.pantalla-juego img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Añadir margen alrededor de la imagen */
+    border: 5px solid #0d0d0e; /* Borde de color vibrante */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    transition: transform 0.3s ease-in-out; /* Transición suave para el efecto hover */
+}
+
+.pantalla-juego img:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón por encima */
+}
+
+.pantalla-juego .opciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    cursor: pointer;
+    width: 80%;
+}
+
+.opcion .letra {
+    background-color: #580078;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 50px;
+    margin-right: 10px;
+}
+
+.opcion .nombre {
+    background: #fff;
+    flex: 1;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+/* Clases para respuestas */
+.opcion .nombreAcertada {
+    background-color: yellowgreen;
+    color: #fff;
+}
+
+.opcion .letraAcertada {
+    background-color: yellowgreen;
+    color: #fff;
+}
+
+.opcion .nombreNoAcertada {
+    background-color: darkred;
+    color: #fff;
+}
+
+.opcion .letraNoAcertada {
+    background-color: darkred;
+    color: #fff;
+}
+
+/* Pantalla Final */
+#pantalla-final {
+    display: none;
+}
+
+#pantalla-final #numCorrectas, #pantalla-final #numIncorrectas {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    font-size: 25px;
+    line-height: 50px;
+    margin: 0 10px;
+}
+
+#pantalla-final #numCorrectas {
+    background-color: chartreuse;
+}
+
+#pantalla-final #numIncorrectas {
+    background-color: darkred;
+}
